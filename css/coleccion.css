@@ -1,0 +1,150 @@
+
+main{
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 5% 15% 75% 5%;
+    font-style: bold;
+}
+
+.menu_obras{
+    border: solid 1px white;
+    padding: 3%;
+}
+
+.conjunto_obras{
+    min-height: 120vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 32% 32% 32% 4%;
+    gap: 1%;
+}
+
+.obra{
+    padding: 1%;
+    border: solid 1px white;
+    font-size: medium;
+}
+
+.obra h2 {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.botones{
+    grid-column: 1/4;
+    grid-row: 4;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.imagen {
+    grid-column: 1;
+    grid-row: 1/4;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu_desplegable {
+    display: none;
+}
+
+.menu_visible .menu_desplegable {
+    display: block;
+}
+
+.menu_obras li{
+    font-size: large;
+    padding: 1%;
+    gap: 1%;
+}
+
+.menu_obras .nombreSeccion:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.menu_desplegable li{
+    font-size: large;
+    padding: 2%;
+    gap: 1%;
+    list-style-type: none;
+}
+
+div.noobras {
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: x-large;
+    border: solid 1px white;
+}
+
+.ventana-emergente {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    pointer-events: none; /* Para que no interfiera con los eventos del ratón */
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+    top: -100%; /* Posición inicial fuera de la vista */
+    transition: top 0.3s; /* Agrega una transición suave para el efecto emergente */
+    transform: translateY(-100%); /* Oculta el elemento */
+}
+
+.ventana-emergente p {
+    font-size: 18px; 
+}
+
+/* Estilo para moviles*/
+@media (max-width: 700px) {
+    main {
+        grid-template-columns: auto;
+        grid-template-rows: 1% auto auto 1%;
+        font-size: small;
+    }
+
+    .conjunto_obras {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        gap: 1%;
+    }
+
+    .obra {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        font-size: small;
+    }
+
+    .imagen {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .obra hr{
+        display: none;
+    }
+
+    .botones {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .menu_obras {
+        padding: 0;
+    }
+
+    .menu_obras h2{
+        padding: 2%;
+    }
+
+    footer{
+        grid-row: 4;
+    }
+}

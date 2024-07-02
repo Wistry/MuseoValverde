@@ -1,0 +1,87 @@
+body {
+    background-image: url('../imagenes/experiencias.jpg');
+}
+
+main {
+    grid-row: 2;
+    margin: 1%;
+    text-align: left;
+    font-size: 16px; 
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr; 
+    gap: 20px; 
+}
+
+.formulario-comentario {
+    grid-column: 2; 
+}
+
+.comentarios-container {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    max-height: 300px; 
+}
+
+.reseña {
+    padding: 20px;
+    margin-bottom: 20px; 
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.reseña hr {
+    margin: 10px 0; 
+}
+
+.formulario-comentario form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 2%;
+}
+
+.formulario-comentario label {
+    margin-bottom: 10px; 
+}
+
+.formulario-comentario input[type="text"],
+.formulario-comentario textarea {
+    width: 100%; 
+    padding: 8px;
+    margin-bottom: 10px; 
+}
+
+.formulario-comentario input[type="submit"] {
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.formulario-comentario input[type="submit"]:hover {
+    background-color: #0056b3; 
+}
+
+input[type="submit"].borrar-btn {
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+input[type="submit"].borrar-btn:hover {
+    background-color: #ff4d4d; 
+}

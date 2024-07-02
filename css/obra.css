@@ -1,0 +1,19 @@
+main{
+    grid-row: 2;
+}
+
+.obra {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    border: 1px   white;
+}
+
+.fichatecnica{
+    padding: 1%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: solid 1px white;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 20% 15% 15% 50%;
+}
